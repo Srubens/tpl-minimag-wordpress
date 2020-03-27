@@ -394,3 +394,77 @@ footer{
 .box_comentario{
 	display: flex;
 }
+
+/*RESPONSIVO TABLET E CELULAR*/
+
+@media(min-width: 481px) and (max-width: 768px){
+	.btn_menu_header{
+		display: block !important;
+	}
+
+	.collapse{
+		background: #222326;
+		height: auto;
+	}
+
+	.main_nav_border{
+	    justify-content: center;
+	    margin-bottom: 22px;
+	}
+}
+
+/*@media(min-width: 480px){
+
+	
+}*/
+
+@media (max-width: 575.98px) {
+
+	.main_logo{
+		display: flex;
+		justify-content: center;
+	}
+
+	.main_menu_top{
+		height: 180px;
+	}
+
+	.main_nav_border{
+		background: #2d3034;
+		border-top: 2px solid #27292D;
+		border-left: 2px solid #27292D;
+		border-right: 2px solid #27292D;
+		height: 280px;
+	}
+
+	.main_menu_top .navbar-nav{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main_content{
+		margin-top: 330px;
+	}
+
+	.article_flex{
+		width: 100%;
+	}
+
+	.pagenation{
+		justify-content: center;
+	}
+
+	.tagcloud{
+		display: flex;
+	    flex-direction: column;
+	    width: 40%;
+	}
+
+	.main_footer{
+		flex-direction: column;
+	}
+
+	.copy{
+		margin-top: 30px;
+	}
+}

@@ -1,8 +1,11 @@
 jQuery(function(){
 
 	jQuery('.j_back').on('click', function(){
-		jQuery(document.body).scrollTop(0);
-		console.log('clicou')
+		jQuery('html, body').animate({scrollTop:0}, 1000);
+	});
+
+	jQuery(".j_bnt_menu").on("click", function(){
+		jQuery(".collapse").toggle("slow");
 	});
 
 });

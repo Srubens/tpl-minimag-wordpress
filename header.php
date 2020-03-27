@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viweport" content="width=device-width,initial-scale=1,user-scalable=no" />
 	<title><?php bloginfo("name") ?></title>
 	<?php wp_head(); ?>
 </head>
@@ -10,7 +11,7 @@
 	<header>
 		<div class="top_header">
 			<nav class="navbar navbar-expand-lg ">
-			  <button class="navbar-toggler btn_menu_header" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <button class="navbar-toggler btn_menu_header j_bnt_menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span>Menu<i class="fa fa-bars"></i></span>
 			  </button>
 			
