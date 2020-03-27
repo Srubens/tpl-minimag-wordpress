@@ -106,12 +106,60 @@
 							</div>
 							
 							<div class="social_icons">
-								<a href="#" target="_blank" ><span><i class="fa fa-twitter-square" title="twitter" ></i></span></a>
-								<a href="#" target="_blank" ><span><i class="fa fa-facebook-square" title="facebook" ></i></span></a>
-								<a href="#" target="_blank" ><span><i class="fa fa-github-square" title="github" ></i></span></a>
-								<a href="#" target="_blank" ><span><i class="fa fa-youtube-square" title="youtube" ></i></span></a>
-								<a href="#" target="_blank" ><span><i class="fa fa-behance-square" title="behance" ></i></span></a>
-								<a href="#" target="_blank" ><span><i class="fa fa-dribbble" title="dribbble" ></i></span></a>
+								<?php 
+ 								   if(get_theme_mod('rm_twitter')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_twitter'); ?>" target="_blank" ><span><i class="fa fa-twitter-square" title="twitter" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+
+								<?php 
+ 								   if(get_theme_mod('rm_facebook')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_facebook'); ?>" target="_blank" ><span><i class="fa fa-facebook-square" title="facebook" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+
+								<?php 
+ 								   if(get_theme_mod('rm_github')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_github'); ?>" target="_blank" ><span><i class="fa fa-github-square" title="github" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+								
+								<?php 
+ 								   if(get_theme_mod('rm_youtube')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_youtube'); ?>" target="_blank" ><span><i class="fa fa-youtube-square" title="youtube" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+								
+								<?php 
+ 								   if(get_theme_mod('rm_behance')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_behance'); ?>" target="_blank" ><span><i class="fa fa-behance-square" title="behance" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+								
+								<?php 
+ 								   if(get_theme_mod('rm_dribbble')){
+ 								?>
+	 								<a href="<?php echo get_theme_mod('rm_dribbble'); ?>" target="_blank" ><span><i class="fa fa-dribbble" title="dribbble" ></i></span></a>
+
+ 								<?php   		
+ 								   }
+								?>
+
 							</div>
 						</div>
 					</div>
