@@ -9,7 +9,7 @@
 	   				<?php if(have_posts()){ ?>
 	   					<?php while(have_posts()){ ?>
 							
-							<article class="single_article">
+							<article id="<?php the_ID(); post_class('single_article'); ?>" >
 
 								<div class="single_item">
 									<!-- PARA COLOCAR MINIATURA -->
