@@ -116,6 +116,7 @@ a:hover{ color:#777; text-decoration: underline; }
 
 .post_random_post{
 	margin: 20px 0;
+	display: flex;
 }
 
 .post_random_post strong{
@@ -301,6 +302,13 @@ footer{
 	width: 100%;
 	height: auto;
 	max-width: 100%;
+}
+
+.post_info iframe,
+.post_info video,
+.post_info embed{
+	width: 100%;
+	height: 270px
 }
 
 .post_data{

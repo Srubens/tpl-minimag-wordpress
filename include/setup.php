@@ -27,6 +27,9 @@ function rm_after_setup(){
 	//LOGO CUSTOMIZADA
 	add_theme_support('custom-logo');
 
+	//AJUSTANDO OS TIPOS DE POSTS
+	add_theme_support('post-formats', array('video', 'audio', 'gallery'));
+
 	//SUPORTE PARA MENUS
 	add_theme_support('menus');
 
@@ -35,6 +38,8 @@ function rm_after_setup(){
 
 	// REMOVENDO A BARRA DO ADMIN
 	// show_admin_bar(false);
+
+
 
 }
 

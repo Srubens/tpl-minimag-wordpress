@@ -77,30 +77,43 @@
 			<div class="main_info">
 				<div class="row">
 					<div class="col-md-8">
-
+						
+						<?php if( is_home() || is_page() ){ ?>
 						<div class="post_random_post">
 							<strong>Você ja leu este Artigo?</strong>
 							<?php 
-  							   
-  							   $rm_Query = new WP_Query(array(
+
+							   // ESTA FINALIDADE TEM QUE ADD O PLUGIN WORDPRESS POST POPULAR DO HECTOR
+							   if( function_exists('wpp_get_mostpopular') ){
+							   		$args = [ 'limit' => 1, 'wpp_start' => '', 'wpp_end' => '', 'post_html' => '<a class="post_random" href="{url}">{text_title}</a>' ];
+							   		wpp_get_mostpopular($args);
+							   }else{
+
+							      $rm_Query = new WP_Query(array(
   							   		'posts_per_page' => 1,	
   							   		'post_type' => 'post',	
   							   		'orderby' => 'rand'	
-  							   ));
+  							      ));
 
-  							   if( $rm_Query->have_posts() ){
-  							   	  while( $rm_Query->have_posts() ){
-  							   	  	  $rm_Query->the_post();
+	  							  if( $rm_Query->have_posts() ){
+	  							   	 while( $rm_Query->have_posts() ){
+	  							   	  	$rm_Query->the_post();
+							   
+  							   
+  							   
 					   	  	?>
 					   	  			  <a class="post_random" href="<?php the_permalink(); ?>"><?= the_title(); ?></a>	
 				   	  	    <?php 
   							   	  }
   							   	  //PARA NAO AFETAR OS OUTROS POST OU AS OUTRAS POSTAGENS
   							   	  wp_reset_postdata();
+  							   }
+
   							   } 								
 
 							?>
 						</div>
+					    <?php } ?>
 
 					</div>
 					<div class="col-md-4 social_area">
