@@ -36,7 +36,8 @@ function rm_social_customizer($wp_customize){
 	//SECTIONS
 	$wp_customize->add_section('rm_social_section', array(
 		'title' => 'Redes Sociais',
-		'priority' => ''
+		'priority' => '',
+		'panel' => 'opcoes'
 	));
 
 	//CONTROLLERS

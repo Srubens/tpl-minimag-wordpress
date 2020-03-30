@@ -7,32 +7,35 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
-	
-	<header>
-		<div class="top_header">
-			<nav class="navbar navbar-expand-lg ">
-			  <button class="navbar-toggler btn_menu_header j_bnt_menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span>Menu<i class="fa fa-bars"></i></span>
-			  </button>
-			
-			  <?php 
-                 
-                 if( has_nav_menu('primary') ){
-		            wp_nav_menu([
-		              'theme_location' => 'primary',
-		              'fallback_cb' => false,
-		              'container_class' => 'collapse navbar-collapse menu_header_primario',
-		              'container_id' => 'navbarResponsive',
-		              'menu_class' => 'navbar-nav align-content-start',
-		              'walker' => new WP_Bootstrap_Navwalker(),
-		              'depth' => 2
-		            ]);
-		          }
 
-			  ?>
-			</nav>
-		</div>
-	</header>
+	<!-- GET THEME MOD OPCAO DE CUSTOMIZAÇÃO -->
+	<?php if( get_theme_mod('rm_topMenu_show') ){ ?>
+		<header>
+			<div class="top_header">
+				<nav class="navbar navbar-expand-lg ">
+				  <button class="navbar-toggler btn_menu_header j_bnt_menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span>Menu<i class="fa fa-bars"></i></span>
+				  </button>
+				
+				  <?php 
+	                 
+	                 if( has_nav_menu('primary') ){
+			            wp_nav_menu([
+			              'theme_location' => 'primary',
+			              'fallback_cb' => false,
+			              'container_class' => 'collapse navbar-collapse menu_header_primario',
+			              'container_id' => 'navbarResponsive',
+			              'menu_class' => 'navbar-nav align-content-start',
+			              'walker' => new WP_Bootstrap_Navwalker(),
+			              'depth' => 2
+			            ]);
+			          }
+
+				  ?>
+				</nav>
+			</div>
+		</header>
+	<?php } ?>
 
 	<div class="main_header">
 		<div class="container-fluid">
@@ -64,9 +67,11 @@
 
 					?>
 				</div>
-				<div class="main_search">
-					<?php get_search_form(); ?>
-				</div>
+				<?php if( get_theme_mod('rm_search_show') ){ ?>
+					<div class="main_search">
+						<?php get_search_form(); ?>
+					</div>
+				<?php } ?>
 			</div>
 
 			<div class="main_info">

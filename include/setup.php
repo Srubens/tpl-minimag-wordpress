@@ -38,6 +38,7 @@ function rm_after_setup(){
 
 }
 
+//PARA WIDGETS
 function rm_widgets(){
 
 	$SidebarLateral = [
@@ -65,6 +66,7 @@ function rm_widgets(){
 
 }
 
+//PARA A PAGINAÇÃO
 function my_pagination() {
 
 	global $wp_query;
