@@ -39,7 +39,35 @@ function rm_after_setup(){
 	// REMOVENDO A BARRA DO ADMIN
 	// show_admin_bar(false);
 
+	//IMAGEM DE CABEÇALHO
+	add_theme_support("custom-header", array(
+		'default-image' => get_template_directory_uri() . '/assets/images/header/mar.jpg',
+		'width' => 1280,
+		'heigth' => 400,
+		'flex-width' => true,
+		'flex-height' => true,
+		'header-text' => false, //SE NAO QUISER TEXTO
+		'uploads' => true //SE NÃO QSER UPLOADS COLOCAR FALSE
+	));
 
+	//MOSTRA A IMAGEM DE CABEÇALHO
+	register_default_headers(array(
+		'headerOne' => array(
+			'url' => get_template_directory_uri() . '/assets/images/header/mar.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/assets/images/header/mar.jpg',
+			'description' => 'Header One'
+		),
+		'headerTwo' => array(
+			'url' => get_template_directory_uri() . '/assets/images/header/ilha.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/assets/images/header/ilha.jpg',
+			'description' => 'Header Two'
+		),
+		'headerThree' => array(
+			'url' => get_template_directory_uri() . '/assets/images/header/terra.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/assets/images/header/terra.jpg',
+			'description' => 'Header Three'
+		)
+	));
 
 }
 

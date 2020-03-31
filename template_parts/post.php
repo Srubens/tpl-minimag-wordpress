@@ -1,4 +1,4 @@
-<article class="article_flex">
+<article <?php post_class('article_flex') ?>>
 	<div class="post_item">
 		<!-- RETORNAR A QUANTIDADE DE COMENTARIOS QUE TEMOS NO POSTS -->
 		<div class="post_comment_area"> <i class="fa fa-comment"></i> <?php comments_number('0', '1', '%'); ?> </div>

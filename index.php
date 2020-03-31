@@ -5,6 +5,13 @@
 	   		<div class="row">
 
 	   			<div class="col-md-8 main_content">
+					
+					<!-- SE CASO O TEMA PRECISE DE UMA IMAGEM TEMA -->
+					<?php if( get_header_image() ){ ?>
+	   				<div class="custom_header">
+	   					<img src="<?php header_image(); ?>" alt="custom-header">
+	   				</div>
+		   			<?php } ?>
 	   				
 	   				<?php if(have_posts()){ ?>
 	   					<?php while(have_posts()){ ?>
