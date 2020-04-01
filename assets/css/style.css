@@ -432,6 +432,11 @@ footer{
     width: 900px;
 }
 
+.load_more{
+	margin-bottom: 15px;
+}
+
+
 /*RESPONSIVO TABLET E CELULAR*/
 
 @media(min-width: 481px) and (max-width: 768px){

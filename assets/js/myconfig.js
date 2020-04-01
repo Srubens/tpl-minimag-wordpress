@@ -8,4 +8,28 @@ jQuery(function(){
 		jQuery(".collapse").toggle("slow");
 	});
 
+	function loadMorePosts(){
+		
+		jQuery('.j_btn').hide();
+		
+		var offset = jQuery('.post_item').length;
+		jQuery.ajax({
+			type:'POST',
+			url: ajaxUrl,
+			data: { action:'LoadMorePosts', offset: offset },
+			success: function(html){
+				jQuery('.j_btn').show()
+				
+				if( html != '' ){
+					jQuery('.post_content_more').append(html);
+				}else{
+					jQuery('.j_btn').hide()
+				}
+			}
+		});
+		
+	}
+
+	jQuery('.j_btn').on('click', loadMorePosts);
+
 });

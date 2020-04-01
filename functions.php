@@ -3,6 +3,7 @@
 require get_template_directory() . "/include/setup.php";
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 require get_template_directory() . "./include/customizer/theme-customizer.php";
+require get_template_directory() . "./include/ajax.php";
 
 
 
@@ -25,6 +26,8 @@ add_action('widgets_init', 'rm_widgets');
  3- CONTROLES = AS PROPRIEDADES
 */
 add_action('customize_register', 'rm_customize_register');
+
+
 
 
 

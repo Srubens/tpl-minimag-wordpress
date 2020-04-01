@@ -13,19 +13,23 @@
 	   				</div>
 		   			<?php } ?>
 	   				
-	   				<?php if(have_posts()){ ?>
-	   					<?php while(have_posts()){ ?>
+	   				<div class="post_content_more">
+		   				<?php if(have_posts()){ ?>
+		   					<?php while(have_posts()){ ?>
 
-	   						<?php the_post(); ?>
+		   						<?php the_post(); ?>
 
-	   						<?php get_template_part('template_parts/post') ?>
-		   				
+		   						<?php get_template_part('template_parts/post') ?>
+			   				
+			   				<?php } ?>
 		   				<?php } ?>
-	   				<?php } ?>
-
-	   				<div class="pagenation">
-		   				<?php my_pagination() ?>
 	   				</div>
+
+	   				<div class="load_more j_btn btn btn-success">Carregar Mais</div>
+
+	   				<!-- <div class="pagenation"> -->
+		   				<?php //my_pagination() ?>
+	   				<!-- </div> -->
 
 	   				<div class="clear"></div>
 	   			
