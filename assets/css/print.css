@@ -1,0 +1,9 @@
+@media print{
+	header{display: none}
+	.main_header{display: none}
+	.main_info{display: none}
+	.social_area{display: none}
+	.box_sidebar{display: none}
+	.comment-respond{display: none}
+	footer{display: none}
+}

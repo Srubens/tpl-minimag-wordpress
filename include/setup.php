@@ -5,6 +5,8 @@ function rm_theme_styles(){
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.css');
 	wp_enqueue_style('style-theme', get_template_directory_uri() . '/assets/css/style.css');
 	wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	//CSS PARA IMPRESSAO
+	wp_enqueue_style('print_css', get_template_directory_uri() . '/assets/css/print.css', array('style-theme'), false, 'print');
 
 
 	// SCRIPTS
